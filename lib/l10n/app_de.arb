@@ -1,0 +1,33 @@
+{
+    "welcomeText": "Willkommen bei AimsysCloud",
+
+    "signintoyouraccount": "Melden Sie sich bei Ihrem Konto an",
+
+    "signUpTextRow": "Anmeldung",
+
+    "emailTextFormField": " E-Mail-Id",
+
+    "passwordTextFormField" :"Passwort",
+
+    "forgetPassTextRow": "Haben Sie Ihr Passwort vergessen?",
+
+    "recover": "Wiederherstellung",
+
+    "signUpText": "Sie haben kein Konto?",
+
+    "sizedBox": "Aanmelden",
+
+    "phone": " telefon",
+
+     "name": "Name",
+
+     "city": " Stadt ",
+
+   " terms": "Ich akzeptiere alle Bedingungen",
+
+    "invalidNumber":"ungültige Telefon-nummer",
+
+  "emailfield":"Das E-Mail-Feld darf nicht leer sein",
+
+  "namereq":"Passwort wird benötigt"
+}
