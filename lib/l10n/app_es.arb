@@ -3,7 +3,6 @@
 
     "signintoyouraccount": "Iniciar sesión en su cuenta",
 
-    "signUpTextRow": "recuperar",
 
     "emailTextFormField": "Identificación de correo",
 
@@ -13,14 +12,7 @@
 
     "recover": "Inscribirse",
 
-     "sizedBox": "INICIAR SESIÓN",
- "phone": "teléfono ",
- "name": "nombre",
-  "city": "ciudad ",
-  "terms": "Acepto todos los términos y condiciones",
-  "invalidNumber": "Numero de celular invalido",
-  "emailfield":"El campo de correo electrónico no puede estar vacío",
+     "sizedBox": "INICIAR SESIÓN"
 
-  "namereq":"se requiere contraseña"
 
 }

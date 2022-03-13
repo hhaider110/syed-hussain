@@ -112,22 +112,13 @@ abstract class ui {
   /// **'English'**
   String get welcomeText;
   String get signintoyouraccount ;
-  String get signUpTextRow ;
   String get emailTextFormField;
   String get  passwordTextFormField ;
   String get  forgetPassTextRow ;
   String get recover;
-  String get signUpText;
   String get sizedBox;
-  String get phone;
-  String get name;
-  String get city;
-  String get terms;
-  String get invalidNumber;
-  String get emailField;
-  String get namereq;
 
-
+  // String get CustomButton;
 }
 
 // ignore: camel_case_types

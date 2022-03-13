@@ -6,11 +6,8 @@ import 'package:ui/gen_l10n/ui.dart';
 import 'package:ui/l10n/l10n.dart';
 import 'package:ui/ui/screens/dashboard.dart';
 import 'package:ui/ui/screens/signin.dart';
-import 'package:ui/ui/screens/signup.dart';
 import 'package:provider/provider.dart';
-import 'package:ui/LanguageChangeProvider.dart';
 import 'package:ui/utils/menu_controller.dart';
-import 'constants.dart';
 import 'package:ui/l10n/l10n.dart';
 import 'constants/constants.dart';
 import 'ui/screens/home.dart';
@@ -53,7 +50,6 @@ class MyApp extends StatelessWidget {
           ],
           routes: <String, WidgetBuilder>{
             SIGN_IN: (BuildContext context) =>  const SignInPage(),
-            SIGN_UP: (BuildContext context) =>  const SignUpScreen(),
             DASHBOARD: (BuildContext context) =>  const DashBoardScreen(),
             HOME: (BuildContext context) => const Home(),
           },

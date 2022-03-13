@@ -31,28 +31,8 @@ class uiEn extends ui {
   @override
   String get recover => 'Recover';
 
-  @override
-  String get signUpText => "Don't have an account?";
 
   @override
   String get sizedBox => "Sign In";
 
-  @override
-  String get phone=> " Phone ";
-  @override
-  String get name=> "Name";
-  @override
-  String get city=> " City ";
-  @override
-  String get terms=> "I accept all terms and conditions" ;
-  @override
-  String get invalidNumber=>"Invalid mobile number";
-  @override
-  String get emailfield=>"Email field can't be empty";
-  @override
-  String get namereq=>"Name is required";
-
-  @override
-  // TODO: implement emailField
-  String get emailField => throw UnimplementedError();
 }

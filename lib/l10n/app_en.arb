@@ -3,7 +3,6 @@
 
     "signintoyouraccount": "Sign in to your account",
 
-  "signUpTextRow": "Sign up",
 
    "emailTextFormField": "Email Id",
 
@@ -13,25 +12,10 @@
 
         "recover": "Recover",
 
-       "signUpText" : "Don't have an account?",
-
-       "sizedBox": "Sign In",
-
-       "phone": "Phone ",
-
-       "name": "Name",
-
-       "city": "City ",
-
-      "terms":"I accept all terms and conditions",
-
-      "invalidNumber":"Invalid mobile number",
-
-      "emailfield":"Email field can't be empty",
-
-      "namereq":"Password is required"
 
 
+       "sizedBox": "Sign In"
 
-}
+
+      }
 
