@@ -3,7 +3,6 @@
 
     "signintoyouraccount": "Iتسجيل الدخول إلى حسابك",
 
-    "SignupTextRow": "اشتراك",
 
     "emailTextFormField": "عنوان الايميل",
 
@@ -11,23 +10,9 @@
 
     "forgetPassTextRow": "نسيت رقمك السري؟",
 
-    "SignUpText": "ليس لديك حساب؟",
+
 
     "recover": "استعادة",
 
-    "sizedBox": "تسجيل الدخول",
-
-   "phone": " هاتف",
-
-    "name": "اسم",
-
-   " city": " مدينة",
-
-    "terms": "أوافق على جميع الشروط والأحكام",
-
-   "invalidNumber":"رقم الجوال غير صالح",
-
-  "emailfield":"البريد الالكتروني مطلوب",
-
-  "namereq":"كلمة المرور مطلوبة"
+    "sizedBox": "تسجيل الدخول"
 }

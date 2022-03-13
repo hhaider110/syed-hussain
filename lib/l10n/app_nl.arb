@@ -3,7 +3,6 @@
 
   "signintoyouraccount": "Log in op uw account",
 
-  "signUpTextRow": "Aanmelden",
 
   "emailTextFormField": " identiteit",
 
@@ -13,21 +12,9 @@
 
   "recover": "herstellen",
 
-  "signUpText": "Heb je geen account?",
 
-  "sizedBox": "AANMELDEN",
+  "sizedBox": "AANMELDEN"
 
-  "phone": "Telefoon",
 
-  "name": "Naam",
-
-  "city": " Stad ",
-
-  " terms": "Ik accepteer alle voorwaarden",
-
-  "invalidNumber":"Ongeldig telefoonnummer",
-  "emailfield":"E-mail is vereist",
-
-  "namereq":"Een wachtwoord is verplicht"
 
 }

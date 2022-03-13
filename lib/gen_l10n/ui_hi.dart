@@ -15,8 +15,6 @@ class uiHi extends ui {
   @override
   String get signintoyouraccount => 'अपने अकाउंट में साइन इन करें';
 
-  @override
-  String get signUpTextRow => 'साइन अप करें';
 
   @override
   String get emailTextFormField => 'ईमेल आईडी';
@@ -31,26 +29,7 @@ class uiHi extends ui {
   String get recover => 'की वसूली';
 
   @override
-  String get signUpText => "खाता नहीं है?";
-  @override
   String get sizedBox=> "साइन इन करें";
 
-  @override
-  String get phone=> "फ़ोन";
-  @override
-  String get name=> "नाम";
-  @override
-  String get city=> "शहर ";
-  @override
-  String get terms=> "मुझे सभी नियम और शर्तें स्वीकार हैं" ;
-  @override
-  String get invalidNumber=>"अमान्य मोबाइल नंबर";
-  @override
-  String get emailfield=>"ईमेल फ़ील्ड खाली नहीं हो सकती";
-  @override
-  String get namereq=>"पासवर्ड की आवश्यकता है";
 
-  @override
-  // TODO: implement emailField
-  String get emailField => throw UnimplementedError();
 }

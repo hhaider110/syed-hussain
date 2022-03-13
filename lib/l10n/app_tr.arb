@@ -3,7 +3,6 @@
 
 "signintoyouraccount": "hesabınıza giriş yapın",
 
-"signUpTextRow": "Üye olmak",
 "emailTextFormField": "Email kimliği",
 
 "passwordTextFormField": "ŞİFRE'",
@@ -12,20 +11,8 @@
 
 "recover": "Kurtarmak",
 
-"signUpText" : "Hesabınız yok mu?",
 
-"sizedBox": "Kayıt olmak",
+"sizedBox": "Kayıt olmak"
 
-"phone": "Telefon",
-
-"name": "İsim",
-
-"city": " Şehir ",
-"terms":"Tüm hüküm ve koşulları kabul ediyorum",
-"invalidNumber":"geçersiz telefon numarası",
-
-  "emailfield":"Email gereklidir",
-
-  "namereq":"Şifre gereklidir"
 }
 

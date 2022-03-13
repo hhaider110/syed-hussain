@@ -1,9 +1,10 @@
-// ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 //import 'package:http/http.dart';
 import 'package:ui/constants/constants.dart';
+import 'package:ui/gen_l10n/ui.dart';
+import 'package:ui/l10n/l10n.dart';
 import 'package:ui/ui/widgets/custom_button.dart';
 import 'package:ui/ui/widgets/custom_shape.dart';
 import 'package:ui/ui/widgets/model_class.dart';
@@ -11,10 +12,13 @@ import 'package:ui/ui/widgets/responsive_ui.dart';
 import 'package:ui/ui/widgets/textformfield.dart';
 import 'package:ui/utils/responsive.dart';
 import 'package:ui/utils/validator.dart';
-import 'package:ui/gen_l10n/ui.dart';
-import 'package:ui/l10n/l10n.dart';
-import '../../l10n/l10n.dart';
+
 import '../../locale_provider.dart';
+import '../widgets/language_picker_widget.dart';
+
+
+
+
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
 
@@ -49,9 +53,17 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     final provider = Provider.of<LocaleProvider>(context);
     final locale = provider.locale ?? Locale('en');
-    _height = MediaQuery.of(context).size.height;
-    _width = MediaQuery.of(context).size.width;
-    _pixelRatio = MediaQuery.of(context).devicePixelRatio;
+    _height = MediaQuery
+        .of(context)
+        .size
+        .height;
+    _width = MediaQuery
+        .of(context)
+        .size
+        .width;
+    _pixelRatio = MediaQuery
+        .of(context)
+        .devicePixelRatio;
     _large = ResponsiveWidget.isScreenLarge(_width, _pixelRatio);
     _medium = ResponsiveWidget.isScreenMedium(_width, _pixelRatio);
     return Material(
@@ -64,6 +76,7 @@ class _SignInScreenState extends State<SignInScreen> {
           child: Column(
             children: [
               clipShape(),
+              //    LanguagePickerWidget(),
               DropdownButtonHideUnderline(
                 child: DropdownButton(
                   value: locale,
@@ -96,25 +109,30 @@ class _SignInScreenState extends State<SignInScreen> {
               SizedBox(width: 12),
               welcomeTextRow(ui.of(context)!.welcomeText),
               signInTextRow(ui.of(context)!.signintoyouraccount),
-              form(),
+              form(ui.of(context)!.emailTextFormField ),
               forgetPassTextRow(ui.of(context)!.forgetPassTextRow),
               SizedBox(height: _height / 12),
               CustomButton(
                 large: _large,
                 width: _width,
                 medium: _medium,
-                text: ui.of(context)!.sizedBox,
+                text:   ui.of(context)!.sizedBox,
                 onPressed: () {
-                  if (_key.currentState!.validate()) {
+                  // Scaffold.of(context).showSnackBar(
+                  //   const SnackBar(
+                  //     content: Text('Login Successful'),
+                  //   ),
+                  // );
                   AuthClass().login(
                       emailController.text, passwordController.text, context);
+                  if (_key.currentState!.validate()) {
                     _key.currentState!.save();
                     // use the email provided here
                     Navigator.of(context).pushNamed(HOME);
                   }
                 },
               ),
-              signUpTextRow(ui.of(context)!.sizedBox),
+              signInTextRow(ui.of(context)!.sizedBox),
             ],
           ),
         ),
@@ -167,6 +185,11 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
+
+
+
+
+
   Widget welcomeTextRow(text) {
     return Container(
       margin: EdgeInsets.only(left: _width / 20, top: _height / 100),
@@ -205,7 +228,7 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
-  Widget form() {
+  Widget form(text) {
     return Container(
       margin: EdgeInsets.only(
         left: _width / 12.0,
@@ -218,8 +241,7 @@ class _SignInScreenState extends State<SignInScreen> {
           children: <Widget>[
             emailTextFormField(ui.of(context)!.emailTextFormField),
             SizedBox(height: _height / 40.0),
-            passwordTextFormField(ui.of(context)!.passwordTextFormField),
-            SizedBox(height: _height / 40.0),
+            passwordTextFormField(ui.of(context)!.passwordTextFormField ),
           ],
         ),
       ),
@@ -229,14 +251,10 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget emailTextFormField(text) {
     return CustomTextField(
       validator: (email) {
-        if(email!.isEmpty) {
-          return (ui.of(context)!.emailField);
-        }
-        return null;
-        // setState(() {
-        //   email = emailController.text;
-        // });
-        // return validator.validateEmail(email);
+        setState(() {
+          email = emailController.text;
+        });
+        return validator.validateEmail(email);
       },
       keyboardType: TextInputType.emailAddress,
       textEditingController: emailController,
@@ -248,10 +266,10 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget passwordTextFormField(text) {
     return PasswordField(
       validator: (pass) {
-        if (pass!.isEmpty) {
-          return (ui.of(context)!.namereq) ;
-        }
-        return null;
+        setState(() {
+          pass = passwordController.text;
+        });
+        return validator.validatePasswordLength(pass);
       },
       keyboardType: TextInputType.number,
       textEditingController: passwordController,
@@ -281,34 +299,6 @@ class _SignInScreenState extends State<SignInScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-           text,
-            style: TextStyle(
-                color: contrastColor,
-                fontWeight: FontWeight.w400,
-                fontSize: _large ? 14 : (_medium ? 12 : 10)),
-          ),
-          const SizedBox(
-            width: 5,
-          ),
-          GestureDetector(
-            onTap: () {},
-            child: Text(
-              ui.of(context)!.recover,
-              style: TextStyle(fontWeight: FontWeight.w600, color: buttonColor),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
-  Widget signUpTextRow(text) {
-    return Container(
-      margin: EdgeInsets.only(top: _height / 120.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
             text,
             style: TextStyle(
                 color: contrastColor,
@@ -319,20 +309,25 @@ class _SignInScreenState extends State<SignInScreen> {
             width: 5,
           ),
           GestureDetector(
-            onTap: () {
-              Navigator.of(context).pushNamed(SIGN_UP);
-            },
-            child: Text(
-              ui.of(context)!.signUpTextRow ,
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-                color: buttonColor,
-                fontSize: _large ? 19 : (_medium ? 17 : 15),
-              ),
+
+            onTap: () {},
+            child:  Text(
+              ui.of(context)!.recover,
+              style: TextStyle(fontWeight: FontWeight.w600, color: buttonColor),
             ),
+
           )
         ],
       ),
     );
   }
+
+  Widget signUpTextRow() {
+    return Container(
+        margin: EdgeInsets.only(top: _height / 120.0)
+
+    );
+  }
+
+
 }

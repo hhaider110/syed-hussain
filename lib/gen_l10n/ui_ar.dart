@@ -10,8 +10,6 @@ class uiAr extends ui {
   @override
   String get signintoyouraccount => '  تسجيل الدخول إلى حسابك';
 
-  @override
-  String get signUpTextRow => 'اشتراك';
 
   @override
   String get emailTextFormField => 'عنوان الايميل';
@@ -27,29 +25,10 @@ class uiAr extends ui {
   String get recover => 'استعادة';
 
   @override
-  String get signUpText => "ليس لديك حساب؟";
-  @override
   String get sizedBox=> "تسجيل الدخول";
 
-  @override
-  String get phone=> " هاتف";
-  @override
-  String get name=> "اسم";
-  @override
-  String get city=> " مدينة";
-  @override
-  String get terms=> "أوافق على جميع الشروط والأحكام" ;
 
-  @override
-  String get invalidNumber=>"رقم الجوال غير صالح";
-  @override
-  String get emailfield=> "البريد الالكتروني مطلوب";
-  @override
-  String get namereq=>"كلمة المرور مطلوبة";
 
-  @override
-  // TODO: implement emailField
-  String get emailField => throw UnimplementedError();
 }
 
 

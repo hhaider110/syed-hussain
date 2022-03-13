@@ -13,8 +13,6 @@ class uiNL extends ui {
   @override
   String get signintoyouraccount => 'Log in op uw account';
 
-  @override
-  String get signUpTextRow => 'Aanmelden';
 
   @override
   String get emailTextFormField => ' Identiteit';
@@ -32,29 +30,9 @@ class uiNL extends ui {
   @override
   String get recover => 'Herstellen';
 
-  @override
-  String get signUpText => "Heb je geen account?";
 
   @override
   String get sizedBox=> "AANMELDEN";
 
-  @override
-  String get phone=> " telefoon";
-  @override
-  String get name=> "Naam";
-  @override
-  String get city=> " Stad ";
-  @override
-  String get terms=> "Ik accepteer alle voorwaarden" ;
 
-  @override
-  String get invalidNumber=>"Ongeldig telefoonnummer";
-  @override
-  String get emailfield=>"E-mail is vereist";
-  @override
-  String get namereq=>"Een wachtwoord is verplicht";
-
-  @override
-  // TODO: implement emailField
-  String get emailField => throw UnimplementedError();
 }
